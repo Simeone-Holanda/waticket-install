@@ -35,9 +35,7 @@ system_git_clone() {
 
   sleep 2
 
-  sudo su - deploy <<EOF
-  git clone ${link_git} /home/deploy/${instancia_add}/
-EOF
+  sudo -u deploy git clone ${link_git} /home/deploy/${instancia_add}/
 
   sleep 2
 }
